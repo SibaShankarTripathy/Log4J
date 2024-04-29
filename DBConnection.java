@@ -1,4 +1,4 @@
-package com.sst.log4j;
+package com.sst.dbconnectionlog4j;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ public class DBConnection {
 	public static Connection getDBConnection(Logger logger) {
 		Connection connection = null;
 		try {
-			connection = DriverManager.getConnection("url","user","password");
+			connection = DriverManager.getConnection("url","username","password");
 			if(connection!=null) {
 				logger.info("com.sst.dbconnectionlog4j.DBConnection.class: Database connected successfully");
 				return connection;
